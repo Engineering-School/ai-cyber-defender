@@ -405,9 +405,7 @@ CyberDefender/
        # Вікно для обробки даних за 5 хвилин
        stream.key_by(lambda x: x['user_id']) \
              .time_window(Time.minutes(5)) \
-             .reduce(lambda x, y
-
-: combine(x, y)) \
+             .reduce(lambda x, y: combine(x, y)) \
              .print()
 
        env.execute("Clickstream Analysis Job")
