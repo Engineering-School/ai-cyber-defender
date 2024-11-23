@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block title %}Map{% endblock %}
+
+{% block content %}
+<style>
+    /* CSS для розміщення SimpleExample по всій ширині та висоті екрану */
+    #react-entry-point {
+        position: absolute;
+        top: 50px; /* Відступ від верхнього краю на висоту заголовка */
+        left: 0;
+        width: 100%;
+        bottom: 50px; /* Відступ від нижнього краю на висоту футера */
+    }
+
+    /* CSS для стилізації заголовка та футера */
+    header, footer {
+        background-color: #f0f0f0;
+        padding: 10px;
+    }
+</style>
+
+<div id="react-entry-point">
+    {% load plotly_dash %}
+    {% plotly_app name="SimpleExample" %}
+</div>
+{% endblock %}

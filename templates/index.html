@@ -1,0 +1,96 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}Register{% endblock %}
+
+{% block content %}
+<div class="container d-flex justify-content-center align-items-center vh-100">
+    {% if user.is_authenticated %}
+       <div class="text-center">
+
+                 <!-- Basic Card Example -->
+                            <div class="card shadow mb-4">
+                                <div class="card-header py-3">
+                                    <h6 class="m-0 font-weight-bold text-primary">Welcome, {{ user.username }}!</h6>
+                                </div>
+                                <div class="card-body">
+                                     <table border="1">
+                                    <tr>
+                                        <td style="border: 1px solid black; text-align: right;">IP address:</td>
+                                        <td style="border: 1px solid black;">{{ user_ip }}</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="border: 1px solid black; text-align: right;">Country:</td>
+                                        <td style="border: 1px solid black;">{{ country }}</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="border: 1px solid black; text-align: right;">City:</td>
+                                        <td style="border: 1px solid black;">{{ city }}</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="border: 1px solid black; text-align: right;">Latitude:</td>
+                                        <td style="border: 1px solid black;">{{ latitude }}</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="border: 1px solid black; text-align: right;">Longitude:</td>
+                                        <td style="border: 1px solid black;">{{ longitude }}</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="border: 1px solid black; text-align: right;">Postal Code:</td>
+                                        <td style="border: 1px solid black;">{{ postal_code }}</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="border: 1px solid black; text-align: right;">Network:</td>
+                                        <td style="border: 1px solid black;">{{ network }}</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="border: 1px solid black; text-align: right;">Browser:</td>
+                                        <td style="border: 1px solid black;">{{ browser }}</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="border: 1px solid black; text-align: right;">Browser Version:</td>
+                                        <td style="border: 1px solid black;">{{ browser_version_string }}</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="border: 1px solid black; text-align: right;">Device:</td>
+                                        <td style="border: 1px solid black;">{{ device }}</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="border: 1px solid black; text-align: right;">User-Agent:</td>
+                                        <td style="border: 1px solid black;">{{ user_agent }}</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="border: 1px solid black; text-align: right;">Cookies:</td>
+                                        <td style="border: 1px solid black;">{{ my_cookie_value }}</td>
+                                    </tr>
+                                </table>
+
+
+                                </div>
+                            </div>
+      </div>
+    {% else %}
+            <!-- Illustrations -->
+            <div class="card shadow mb-4">
+                <div class="card-header py-3">
+                    <h6 class="m-0 font-weight-bold text-primary">Cyber Defenders Program 2024</h6>
+                </div>
+                <div class="card-body">
+                    <div class="text-center">
+                        <img class="img-fluid px-3 px-sm-4 mt-3 mb-4" style="width: 25rem;"  src="{% static 'img/cyberdefenders.jpg' %}" alt="...">
+                    </div>
+                    <p>The "Cyber Defenders" educational reintegration program for veterans has been launched in Ukraine,
+                        aimed at providing training and requalification opportunities for veterans interested in defending the country in the digital sphere.
+                        The program, hosted at the National University "Kyiv-Mohyla Academy," offers a comprehensive curriculum over a four-month period,
+                        including practical sessions, English language intensives, career counseling, and psychosocial support, with the goal of strengthening
+                        Ukraine's digital infrastructure defense capabilities.</p>
+                    <a target="_blank" rel="nofollow" href="https://www.ukrinform.ua/rubric-society/3836850-startuvala-navcalna-reintegracijna-programa-dla-veteraniv-kiberzahisniki.html">Read more
+                         &rarr;</a>
+                </div>
+            </div>
+    {% endif %}
+</div>
+{% endblock %}
+
+

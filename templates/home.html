@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to CyberDefender</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        .container {
+            text-align: center;
+            margin-top: 100px;
+        }
+        h1 {
+            color: #333;
+        }
+        p {
+            color: #666;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to CyberDefender</h1>
+        <p>This is the landing page for the CyberDefender project.</p>
+        <p>Your IP address: {{ user_ip }}</p>  <!-- Додайте вивід IP-адреси -->
+        <p>Your Country: {{ country }}</p>     <!-- Додайте країну -->
+        <p>Your City: {{ city }}</p>
+        <p>Your Latitude: {{ latitude }}</p>
+        <p>Your Longitude: {{ longitude }}</p>
+        <p>Your Postal Code: {{ postal_code }}</p>
+        <p>Your Network: {{ network }}</p>
+        <p> {{ user_agent }}</p>
+        <p> {{ my_cookie_value }}</p>
+
+    </div>
+</body>
+
+
+</html>
